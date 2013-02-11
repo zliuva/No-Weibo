@@ -1,0 +1,10 @@
+Package: com.softboysxp.noweibo
+Name: No Weibo
+Depends: 
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Removes all Weibo components from iOS. After installation this package can be removed.
+Maintainer: softboysxp
+Author: softboysxp
+Section: System
+Tag: role::hacker

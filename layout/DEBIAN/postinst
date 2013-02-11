@@ -1,0 +1,17 @@
+#!/bin/sh
+
+rm -rf /System/Library/Accounts/Authentication/WeiboAuthenticationPlugin.bundle
+find /System/Library/Frameworks/Social.framework/ -name '*Weibo*' -exec rm {} \;
+rm -f /System/Library/Frameworks/Social.framework/weibod
+rm -rf /System/Library/Frameworks/Social.framework/weibodModel.momd
+rm -f /System/Library/LaunchDaemons/com.apple.weibod.plist
+rm -rf /System/Library/PreferenceBundles/WeiboSettings.bundle
+rm -rf /System/Library/SocialServices/Weibo.socialplugin
+rm -f /Applications/Preferences.app/Weibo*.png
+
+echo "Weibo components removed."
+
+/usr/bin/noweibo
+
+killall Preferences
+
